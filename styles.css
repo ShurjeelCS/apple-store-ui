@@ -12,10 +12,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
 
 body {
-    font-family: "Inter", sans-serif;
+    
     font-size: 16px;
     font-weight: 400;
     min-height: 100vh;
@@ -78,7 +79,7 @@ body {
     border-radius: 1rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    box-shadow: 0px 5px 7px 3px rgba(0,0,0,0.11);
+    box-shadow: 0px 5px 7px 3px rgba(0, 0, 0, 0.11);
 }
 
 .left {
@@ -95,40 +96,60 @@ body {
     padding: 2rem;
 }
 
+.divider {
+    margin: 2rem 0;
+    border-top: 1px solid var(--dark-grey);
+}
+
+.coupon-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+.coupon-row input {
+    flex: 1;
+    padding-left: 1rem;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.14);
+}
+
 
 /* Utilities */
 .white {
     color: #fff;
 }
 
-.img-holder img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
 
 .img-holder {
-    /* border: 1px solid var(--dark-grey); */
     height: 100%;
-    width: max-content;
-    padding: 10px 35px;
-    box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.14);
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    width: 120px;
+    box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.14);
     background-color: var(--pale);
     border-radius: 10px
+}
+
+.img-holder img {
+    height: 100%;
 }
 
 .row-container {
     display: flex;
     flex-direction: column;
-    /* gap: 10px; */
+    gap: 20px;
     justify-content: space-between;
-    height: 70%;
+    /* height: 70%; */
 }
 
 .row {
     display: flex;
     gap: 1rem;
-    height: 130px;
+    height: 100px;
+    align-items: center;
 }
 
 .description {
@@ -152,3 +173,33 @@ body {
     grid-row: 4/5;
 }
 
+.btn {
+    background-color: var(--dark);
+    color: #fff;
+    border-radius: 1rem;
+    padding: 1rem
+}
+
+.checkout {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.grid {
+    height: 100%;
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.grid .text-right {
+    justify-self: end;
+}
+
+.bold {
+    font-weight: 700;
+}
