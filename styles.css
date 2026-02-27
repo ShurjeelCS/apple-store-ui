@@ -16,7 +16,7 @@
 }
 
 body {
-    
+    overflow-x: hidden; /* prevents horizontal scroll causing width issues */
     font-size: 16px;
     font-weight: 500;
     min-height: 100vh;
@@ -27,7 +27,8 @@ body {
 .background {
     position: absolute;
     top: 0;
-    width: 100%;
+    left: 0;
+    width: 100vw;
     height: 33vh;
     z-index: 0;
 }
@@ -37,6 +38,7 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: top;
+    display: block; 
 }
 
 .layout {
@@ -113,6 +115,8 @@ body {
 }
 
 
+
+
 /* Utilities */
 .white {
     color: #fff;
@@ -132,6 +136,8 @@ body {
 
 .img-holder img {
     height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
 .row-container {
@@ -173,7 +179,7 @@ body {
 .btn {
     background-color: var(--dark);
     color: #fff;
-    border-radius: 1rem;
+    border-radius: 10px;
     padding: 1rem
 }
 
@@ -200,4 +206,64 @@ body {
 
 .bold {
     font-weight: 700;
+}
+
+input {
+    padding-left: 1rem;
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.14);
+}
+
+select {
+    padding-left: 1rem;
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.14);
+}   
+
+.location {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.right .btn {
+    text-align: center;
+}
+
+.right h3 {
+    margin-bottom: 2rem;
+}
+
+.my-1 {
+    margin: 1rem 0;
+}
+
+.max {
+    width: 100%;
+}
+
+@media(max-width: 900px) {
+    .layout {
+        padding: 2rem 1.5rem;
+    }
+
+    .img-holder {
+        padding: 8px 12px;
+    }
+}
+
+@media(max-width: 680px) {
+    .card {
+        grid-template-columns: 1fr;
+    }
+
+    .img-holder {
+        width: 70px;
+    }
 }
